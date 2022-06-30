@@ -30,3 +30,18 @@ extension Color {
     static let textFieldBG = Color(.systemGray6)
 }
 
+extension View {
+    //Deprecated
+    
+//    func endEditing(_ force: Bool){
+//     UIApplication.shared.windows.forEach({$0.endEditing(force)})
+//
+//
+//    }
+    
+    func endTextEditing() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                        to: nil, from: nil, for: nil)
+      }
+    
+}

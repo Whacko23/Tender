@@ -29,6 +29,8 @@
 		49C0A6ED2863E68E0014890B /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6EC2863E68E0014890B /* ChatManager.swift */; };
 		49C0A6F12863E6C90014890B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6F02863E6C90014890B /* ChatView.swift */; };
 		49C0A6F32863E6D80014890B /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6F22863E6D80014890B /* ChatHeaderView.swift */; };
+		49CDC7C3286C007B003A4B72 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7C2286C007B003A4B72 /* MessageListView.swift */; };
+		49CDC7C5286C00C9003A4B72 /* MessagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7C4286C00C9003A4B72 /* MessagesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		49C0A6EC2863E68E0014890B /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		49C0A6F02863E6C90014890B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		49C0A6F22863E6D80014890B /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
+		49CDC7C2286C007B003A4B72 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		49CDC7C4286C00C9003A4B72 /* MessagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				49C0A6EC2863E68E0014890B /* ChatManager.swift */,
 				49C0A6F02863E6C90014890B /* ChatView.swift */,
 				49C0A6F22863E6D80014890B /* ChatHeaderView.swift */,
+				49CDC7C2286C007B003A4B72 /* MessageListView.swift */,
+				49CDC7C4286C00C9003A4B72 /* MessagesListViewModel.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 				49C0A6F12863E6C90014890B /* ChatView.swift in Sources */,
 				49C0A6D52863E3E30014890B /* ProfileImageView.swift in Sources */,
 				49C0A6E12863E5240014890B /* Extension.swift in Sources */,
+				49CDC7C3286C007B003A4B72 /* MessageListView.swift in Sources */,
+				49CDC7C5286C00C9003A4B72 /* MessagesListViewModel.swift in Sources */,
 				49C0A6D72863E4160014890B /* ProfilePromoView.swift in Sources */,
 				49C0A6CB2863E1570014890B /* AppStateManager.swift in Sources */,
 				49C0A6D92863E4380014890B /* ProfilePromoSwipeView.swift in Sources */,
