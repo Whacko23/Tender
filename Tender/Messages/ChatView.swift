@@ -41,10 +41,10 @@ struct ChatView: View {
                         .onAppear(perform: {
                             scrollProxy = proxy
                         })
-                        .onChange(of: chatMng.messages) { _ in
-                           // proxy.scrollTo(chatMng.messages.count  - 1)
-                            scrollToBottom()
-                        }
+//                        .onChange(of: chatMng.messages) { _ in
+//                           // proxy.scrollTo(chatMng.messages.count  - 1)
+//                            scrollToBottom()
+//                        }
                     }//: ScrollView REader
                 }//: ScrollView
                 
@@ -57,7 +57,9 @@ struct ChatView: View {
                         .frame(height: 45)
                         .padding(.horizontal)
                     
-                    Button(action: {sendMessage()}) {
+                    Button(action: {
+                        sendMessage()
+                    }) {
                         Text("Send")
                             .foregroundColor(typedMessage.isEmpty ? Color.secondaryText : Color.blue)
                     }
@@ -73,25 +75,28 @@ struct ChatView: View {
                 .padding(.bottom)
                 
             }//: VStack
+            .modifier(HideNavigationView())
+            .onChange(of: chatMng.keyboardIsShowing, perform: { value in
+                if value {
+                    scrollToBottom()
+                }
+            })
+            .onChange(of: chatMng.messages, perform: { _ in
+                scrollToBottom()
+            })
+            
             
             ChatHeaderView(name: Person.example.name, imageURL: Person.example.imageURLS.first, videoAction: {}, shieldAction: {})
         }//: ZStack
-        .navigationTitle("")
-        .navigationBarHidden(true)
-        .onChange(of: chatMng.keyboardIsShowing, perform: { value in
-            if value {
-                scrollToBottom()
-            }
-        })
-        .onChange(of: chatMng.messages, perform: { _ in
-            scrollToBottom()
-        })
+        
        
         
     }
     
     func sendMessage(){
-        chatMng.sendMessage(Message(content: typedMessage))
+        if !typedMessage.isEmpty {
+            chatMng.sendMessage(Message(content: typedMessage))
+        }
         typedMessage = ""
     }
     

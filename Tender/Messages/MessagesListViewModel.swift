@@ -16,6 +16,6 @@ class MessageListViewModel: ObservableObject {
     
     func loadPreviews(){
         // Handle networking to load real message previews
-        self.messagePreviews = [MessagePreview.example]
+        self.messagePreviews = MessagePreview.examples
     }
 }

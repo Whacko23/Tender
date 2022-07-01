@@ -14,56 +14,79 @@ struct MessageListView: View {
     @State private var isEditing: Bool = false
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("SearchBar", text: $searchText )
-                    .padding(7)
-                    .padding(.horizontal, 25)
-                    .background(Color.textFieldBG)
-                    .cornerRadius(8)
-                    .overlay(
-                        HStack{
-                            Image(systemName: "magnifyingglass")                            .foregroundColor(.primaryText)
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.leading, 4)
-                            
-                            Spacer()
-                        }
-                    )
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEditing = true
-                }
-                .animation(.easeIn(duration: 0.15), value: isEditing)
+        ScrollView(showsIndicators: false) {
+            VStack {
                 
-                
-                if isEditing {
-                    Button {
-                        self.isEditing = false
-                        self.searchText = ""
-                        self.endTextEditing()
-                    } label: {
-                        Text("Cancel")
-                            
+                //SEarch BAr
+                HStack {
+                    TextField("SearchBar", text: $searchText )
+                        .padding(7)
+                        .padding(.horizontal, 25)
+                        .background(Color.textFieldBG)
+                        .cornerRadius(8)
+                        .overlay(
+                            HStack{
+                                Image(systemName: "magnifyingglass")                            .foregroundColor(.primaryText)
+                                    .font(.system(size: 20, weight: .bold))
+                                    .padding(.leading, 4)
+                                
+                                Spacer()
+                            }
+                        )
+                    .padding(.horizontal, 10)
+                    .onTapGesture {
+                        self.isEditing = true
                     }
-                    .padding(.trailing, 10)
-                    .transition(.move(edge: .trailing))
-                    .animation(.easeIn(duration: 0.15))
-                }
+                    .animation(.easeIn(duration: 0.15), value: isEditing)
+                    
+                    
+                    if isEditing {
+                        Button {
+                            self.searchText = ""
+                            self.isEditing = false
+                            self.endTextEditing()
+                        } label: {
+                            Text("Cancel")
+                                
+                        }
+                        .padding(.trailing, 10)
+                        .transition(.move(edge: .trailing))
+                        .animation(.easeIn(duration: 0.15))
+                    }
 
+                    
+                }//: Hstack
                 
-            }//: Hstack
-            
-            
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            
-            Spacer()
+                Spacer().frame(height: 20)
+                
+                VStack(){
+                    ForEach(vm.messagePreviews, id:\.self) { preview in
+                        
+                        NavigationLink {
+                            ChatView(person: preview.person)
+                        } label: {
+                            MessageRowView(preview: preview)
+                                .padding(.vertical, 12)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+
+                        
+                    }
+                }
+                
+                
+                
+                Spacer()
+            }
         }
     }
 }
 
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageListView()
+        NavigationView {
+            MessageListView()
+            .modifier(HideNavigationView())        }
+        
     }
 }

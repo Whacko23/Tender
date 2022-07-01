@@ -18,7 +18,7 @@ struct Message: Hashable {
 }
 
 extension Message {
-    static let exampleSent = Message(content:"Hello there")
+    static let exampleSent = Message(content:"There is a Chris Brown show in the 25. Wanna go with me?")
     static let exampleRecieved = Message(content:"Heya", person: Person.example.name)
 }
 
