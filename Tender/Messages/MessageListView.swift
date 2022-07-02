@@ -59,18 +59,25 @@ struct MessageListView: View {
                 
                 Spacer().frame(height: 20)
                 
-                VStack(){
-                    ForEach(vm.messagePreviews, id:\.self) { preview in
-                        
-                        NavigationLink {
-                            ChatView(person: preview.person)
-                        } label: {
-                            MessageRowView(preview: preview)
-                                .padding(.vertical, 12)
-                        }
-                        .buttonStyle(PlainButtonStyle())
+                ZStack {
+                    VStack(){
+                        ForEach(vm.messagePreviews.filter({ searchText.isEmpty ? true : displayPreview($0)}), id:\.self) { preview in
+                            
+                            NavigationLink {
+                                ChatView(person: preview.person)
+                            } label: {
+                                MessageRowView(preview: preview)
+                                    .padding(.vertical, 12)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .animation(.easeIn(duration: 0.15))
+                            .transition(.slide)
 
-                        
+                            
+                        }
+                    }
+                    if isEditing && searchText.isEmpty {
+                        Color.white.opacity(0.6)
                     }
                 }
                 
@@ -79,6 +86,19 @@ struct MessageListView: View {
                 Spacer()
             }
         }
+    }
+    
+    func displayPreview( _ preview: MessagePreview) -> Bool {
+        // person name
+        if preview.person.name.contains(searchText) {return true}
+        
+        // last msg sent
+        if preview.lastMessage.contains(searchText) {return true}
+        
+        // person bio
+        if preview.person.bio.contains(searchText) { return true}
+        
+        return false
     }
 }
 

@@ -22,72 +22,75 @@ struct MainView: View {
             let view = Text("star")
             return AnyView(view)
         case .message:
-            let view = Text("message")
+            let view = MessageListView()
             return AnyView(view)
         case .person :
-            let view = Text("person")
+            let view = ProfileView()
             return AnyView(view)
         }
     }
     
     var body: some View {
-        ZStack {
-            Color(.systemGray6)
-                .opacity(0.35)
+        NavigationView {
+            ZStack {
+                Color(.systemGray6)
+                    .opacity(0.35)
+                    .edgesIgnoringSafeArea(.vertical)
+                
+                VStack(spacing:0) {
+                    
+                    
+                    HStack {
+                        Group {
+                            Spacer()
+        
+                            TabBarButtonView(type: .fire){
+                                print("test")
+                            }
+                        }
+                        
+                        
+                        Group {
+                            Spacer()
+                            TabBarButtonView(type: .search) {
+                                print("test")
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(type: .star){
+                            print("test")
+                        }
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(type: .message){
+                            print("test")
+                        }
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(type: .person){
+                            print("test")
+                        }
+                        
+                        Spacer()
+                        
+                       
+                    }//: Hstack
+                    .frame(height: 100)
+                    .padding(.top, 30)
+                    
+                    correctViewForState()
+                    
+                    Spacer()
+                }
                 .edgesIgnoringSafeArea(.vertical)
-            
-            VStack {
                 
                 
-                HStack {
-                    Group {
-                        Spacer()
-    
-                        TabBarButtonView(type: .fire){
-                            print("test")
-                        }
-                    }
-                    
-                    
-                    Group {
-                        Spacer()
-                        TabBarButtonView(type: .search) {
-                            print("test")
-                        }
-                    }
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(type: .star){
-                        print("test")
-                    }
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(type: .message){
-                        print("test")
-                    }
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(type: .person){
-                        print("test")
-                    }
-                    
-                    Spacer()
-                    
-                   
-                }//: Hstack
-                .frame(height: 100)
-                .padding(.vertical, 30)
-                
-                correctViewForState()
-                
-                Spacer()
             }
-            .edgesIgnoringSafeArea(.vertical)
-            
-            
+            .modifier(HideNavigationView())
         }
     }
 }

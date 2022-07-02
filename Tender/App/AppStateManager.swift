@@ -9,6 +9,6 @@ import Foundation
 
 class AppStateManager: ObservableObject{
     
-    @Published var selectedTab: TabBarButtonType = .star
+    @Published var selectedTab: TabBarButtonType = .person
 //    @Published var selectedPromo: ProfilePromoType = .platinum
 }
