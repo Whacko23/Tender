@@ -86,7 +86,7 @@ struct ChatView: View {
             })
             
             
-            ChatHeaderView(name: Person.example.name, imageURL: Person.example.imageURLS.first, videoAction: {}, shieldAction: {})
+            ChatHeaderView(name: person.name, imageURL: person.imageURLS.first, videoAction: {}, shieldAction: {})
         }//: ZStack
         
        
