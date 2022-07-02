@@ -18,6 +18,8 @@ struct MessageListView: View {
             VStack {
                 
                 //SEarch BAr
+                Spacer().frame(height: 20)
+                
                 HStack {
                     TextField("SearchBar", text: $searchText )
                         .padding(7)

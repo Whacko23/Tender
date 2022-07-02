@@ -34,7 +34,7 @@ struct TabBarButtonView: View {
                 .foregroundColor(Color.gray.opacity(0.5))
                 
         }
-        .frame(height: 32)
+        .frame(height: 28)
     }
 }
 

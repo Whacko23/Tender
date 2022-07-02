@@ -20,6 +20,9 @@ struct ProfileView: View {
                     )
                 
                 VStack(spacing:0){
+                    
+                    Spacer().frame(height:20)
+                    
                     ZStack {
                         Circle()
                             .frame(width: 200, height: 200)
@@ -33,7 +36,7 @@ struct ProfileView: View {
                         .font(.system(size: 35, weight: .medium))
                         .padding(.vertical, 15)
                     
-                    Spacer().frame(height:50)
+                    Spacer().frame(height:30)
                     
                     HStack(alignment:.top){
                         Spacer()
@@ -53,6 +56,7 @@ struct ProfileView: View {
             }
         }//: Vstack
         .background(Color.gray.opacity(0.2))
+        
         
     }
 }

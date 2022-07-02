@@ -13,7 +13,7 @@ struct MessageRowView: View {
     var body: some View {
         HStack {
             ProfileImageView(url: preview.person.imageURLS.first)
-                .frame(height: 90)
+                .frame(height: 70)
                 .padding(.horizontal)
             
             VStack(alignment: .leading, spacing: 8){

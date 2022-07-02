@@ -33,9 +33,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(.systemGray6)
-                    .opacity(0.35)
-                    .edgesIgnoringSafeArea(.vertical)
+                
                 
                 VStack(spacing:0) {
                     
@@ -79,10 +77,14 @@ struct MainView: View {
                         
                        
                     }//: Hstack
-                    .frame(height: 100)
+                    .frame(height: 70)
                     .padding(.top, 30)
+                    .background(Color(.systemGray6).opacity(0.45))
+                    
+                    
                     
                     correctViewForState()
+                        
                     
                     Spacer()
                 }
