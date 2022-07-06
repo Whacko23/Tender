@@ -13,5 +13,5 @@ struct User {
 }
 
 extension User {
-    static let example = User(name: "Andy", goldSubscriber: false)
+    static let example = User(name: "Andy", goldSubscriber: true)
 }

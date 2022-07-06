@@ -35,6 +35,7 @@
 		49CDC7C92870F4BD003A4B72 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7C82870F4BD003A4B72 /* UserManager.swift */; };
 		49CDC7CB2870F6B4003A4B72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7CA2870F6B4003A4B72 /* User.swift */; };
 		49CDC7CE2870FECE003A4B72 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7CD2870FECE003A4B72 /* LikesView.swift */; };
+		49CDC7D4287252B9003A4B72 /* PersonSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7D3287252B9003A4B72 /* PersonSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		49CDC7C82870F4BD003A4B72 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		49CDC7CA2870F6B4003A4B72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49CDC7CD2870FECE003A4B72 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
+		49CDC7D3287252B9003A4B72 /* PersonSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				49CDC7CD2870FECE003A4B72 /* LikesView.swift */,
+				49CDC7D3287252B9003A4B72 /* PersonSquare.swift */,
 			);
 			path = MatchesView;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				49C0A6ED2863E68E0014890B /* ChatManager.swift in Sources */,
 				49C0A6EB2863E6780014890B /* MessagesView.swift in Sources */,
 				49C0A6BA2863DE750014890B /* ContentView.swift in Sources */,
+				49CDC7D4287252B9003A4B72 /* PersonSquare.swift in Sources */,
 				49CDC7C7286E8439003A4B72 /* MessageRowView.swift in Sources */,
 				49C0A6DB2863E4940014890B /* ProfilePromoButton.swift in Sources */,
 				49C0A6F32863E6D80014890B /* ChatHeaderView.swift in Sources */,

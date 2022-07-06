@@ -30,23 +30,23 @@ struct LikesView: View {
                 columns: [GridItem(.flexible()),GridItem(.flexible())],
                 alignment: .center,
                 spacing: nil,
-                pinnedViews: []) {
-                    Text("PlaceHolder")
-                    Text("PlaceHOlder")
-                    Text("PlaceHolder")
-                    Text("PlaceHOlder")
-                    Text("PlaceHolder")
-                    Text("PlaceHOlder")
-                    Text("PlaceHolder")
-                    Text("PlaceHOlder") 
+                pinnedViews: [],
+                content: {
+                    ForEach(userMng.matches) {person in
+                        PersonSquare(person: person, blur: !user.goldSubscriber)
+                            .frame(height: 240)
+                    }
+                })
+            .padding(.horizontal, 6)
+            
             
         }// Scroll view
         
         
-            }
-        
     }
+    
 }
+
 
 struct LikesView_Previews: PreviewProvider {
     static var previews: some View {
