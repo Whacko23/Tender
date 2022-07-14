@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LikesView: View {
+struct TopPicksView: View {
     @EnvironmentObject var userMng: UserManager
     @EnvironmentObject var appState: AppStateManager
     
@@ -18,7 +18,7 @@ struct LikesView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             if !user.goldSubscriber {
-                Text("Upgrade to Gold to see people who already liked you.")
+                Text("See who already likes you by subscribing to Tender Gold")
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                     .foregroundColor(.textTitle)
@@ -34,7 +34,7 @@ struct LikesView: View {
                 pinnedViews: [],
                 content: {
                     ForEach(userMng.matches) {person in
-                        PersonSquare(person: person, blur: !user.goldSubscriber)
+                        PersonSquare(person: person, blur: false)
                             .frame(height: 240)
                             .onTapGesture {
                                 personTapped(person)
@@ -57,9 +57,9 @@ struct LikesView: View {
 }
 
 
-struct LikesView_Previews: PreviewProvider {
+struct TopPicksView_Previews: PreviewProvider {
     static var previews: some View {
-        LikesView()
+        TopPicksView()
             .environmentObject(UserManager())
             .environmentObject(AppStateManager())
     }

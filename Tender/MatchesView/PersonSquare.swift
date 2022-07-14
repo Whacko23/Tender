@@ -25,8 +25,12 @@ struct PersonSquare: View {
                 
                 Text("\(person.name), \(person.age)")
                     .padding()
-    //                .foregroundColor(.white)
+//                    .foregroundColor(.white)
                     .font(.system(size: 18, weight: .semibold))
+//                    .background(.black)
+//                    .cornerRadius(10)
+//                    .opacity(0.7)
+//                    .padding(6)
                     .if(blur) {
                         $0.redacted(reason: .placeholder)                 }
             }
