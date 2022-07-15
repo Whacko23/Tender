@@ -32,6 +32,7 @@ struct ProfilePromoButton: View {
     
     var body: some View {
         Button(action: {
+            appState.showPurchaseScreen()
 //            appState.selectedPromo =
             
         })

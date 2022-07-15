@@ -52,6 +52,7 @@ struct ProfilePromoSwipeView_Previews: PreviewProvider {
         ZStack {
             ProfilePromoSwipeView()
                 .environmentObject(AppStateManager())
+                .environmentObject(UserManager())
         }
         .background(Color.gray.opacity(0.6))
         

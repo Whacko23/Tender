@@ -8,6 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userMng: UserManager
+    @EnvironmentObject var appState: AppStateManager
+    
+    var user: User{
+        return userMng.currentUser
+    }
+    
+    var backgroundColor: Color{
+        if !user.goldSubscriber{
+            return Color.gray.opacity(0.2)
+        }
+        
+        return Color.white
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             ZStack{
@@ -26,12 +41,12 @@ struct ProfileView: View {
                     ZStack {
                         Circle()
                             .frame(width: 200, height: 200)
-                        ProfileImageView(url: URL(string: "https://picsum.photos/300"))
+                        ProfileImageView(url: user.imageURLS.first)
                             .frame(height: 200)
                     }
                     
                     
-                    Text("Ryan, 23")
+                    Text("\(user.name), \(user.age)")
                         .foregroundColor(.textTitle)
                         .font(.system(size: 35, weight: .medium))
                         .padding(.vertical, 15)
@@ -51,11 +66,15 @@ struct ProfileView: View {
                     }
                     .padding(.bottom, 40)
                     
-                    ProfilePromoSwipeView()
+                    if !user.goldSubscriber{
+                        ProfilePromoSwipeView()
+                    }
+                    
+                    Spacer()
                 }
             }
         }//: Vstack
-        .background(Color.gray.opacity(0.2))
+        .background(backgroundColor)
         
         
     }
@@ -65,5 +84,7 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
             .background(Color.defaultBackgroundColor)
+            .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }

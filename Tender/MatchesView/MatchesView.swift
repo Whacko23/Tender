@@ -79,6 +79,7 @@ struct MatchesView: View {
                     .foregroundColor(.white)
                     .background(Color.yellow)
                     .cornerRadius(30)
+                    .padding()
             }
             .buttonStyle(PlainButtonStyle())
         }
