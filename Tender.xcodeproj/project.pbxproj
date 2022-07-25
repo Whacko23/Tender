@@ -39,6 +39,9 @@
 		49CDC7D8287FC09E003A4B72 /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7D7287FC09E003A4B72 /* TopPicksView.swift */; };
 		49CDC7DA287FC2A9003A4B72 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7D9287FC2A9003A4B72 /* MatchesView.swift */; };
 		49CDC7DC2881FC36003A4B72 /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7DB2881FC36003A4B72 /* PurchasePopup.swift */; };
+		49CDC7E1288E1805003A4B72 /* PurchaseSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E0288E1805003A4B72 /* PurchaseSwipePromo.swift */; };
+		49CDC7E3288E314D003A4B72 /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E2288E314D003A4B72 /* PurchaseOptionView.swift */; };
+		49CDC7E5288E318E003A4B72 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E4288E318E003A4B72 /* Subscription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		49CDC7D7287FC09E003A4B72 /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		49CDC7D9287FC2A9003A4B72 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		49CDC7DB2881FC36003A4B72 /* PurchasePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
+		49CDC7E0288E1805003A4B72 /* PurchaseSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSwipePromo.swift; sourceTree = "<group>"; };
+		49CDC7E2288E314D003A4B72 /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
+		49CDC7E4288E318E003A4B72 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 				49C0A6E52863E5620014890B /* MessagePreview.swift */,
 				49C0A6E72863E56D0014890B /* Message.swift */,
 				49CDC7CA2870F6B4003A4B72 /* User.swift */,
+				49CDC7E4288E318E003A4B72 /* Subscription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				49CDC7DB2881FC36003A4B72 /* PurchasePopup.swift */,
+				49CDC7E2288E314D003A4B72 /* PurchaseOptionView.swift */,
+				49CDC7E0288E1805003A4B72 /* PurchaseSwipePromo.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 				49CDC7D4287252B9003A4B72 /* PersonSquare.swift in Sources */,
 				49CDC7C7286E8439003A4B72 /* MessageRowView.swift in Sources */,
 				49C0A6DB2863E4940014890B /* ProfilePromoButton.swift in Sources */,
+				49CDC7E1288E1805003A4B72 /* PurchaseSwipePromo.swift in Sources */,
 				49C0A6F32863E6D80014890B /* ChatHeaderView.swift in Sources */,
 				49CDC7DA287FC2A9003A4B72 /* MatchesView.swift in Sources */,
 				49C0A6F12863E6C90014890B /* ChatView.swift in Sources */,
@@ -299,6 +309,7 @@
 				49CDC7C3286C007B003A4B72 /* MessageListView.swift in Sources */,
 				49CDC7C5286C00C9003A4B72 /* MessagesListViewModel.swift in Sources */,
 				49C0A6D72863E4160014890B /* ProfilePromoView.swift in Sources */,
+				49CDC7E5288E318E003A4B72 /* Subscription.swift in Sources */,
 				49C0A6CB2863E1570014890B /* AppStateManager.swift in Sources */,
 				49C0A6D92863E4380014890B /* ProfilePromoSwipeView.swift in Sources */,
 				49C0A6D12863E30C0014890B /* ProfileView.swift in Sources */,
@@ -306,6 +317,7 @@
 				49C0A6C92863DFE90014890B /* MainView.swift in Sources */,
 				49CDC7DC2881FC36003A4B72 /* PurchasePopup.swift in Sources */,
 				49C0A6E42863E54B0014890B /* Person.swift in Sources */,
+				49CDC7E3288E314D003A4B72 /* PurchaseOptionView.swift in Sources */,
 				49C0A6D32863E3BD0014890B /* ProfileButtonView.swift in Sources */,
 				49CDC7CB2870F6B4003A4B72 /* User.swift in Sources */,
 				49C0A6E82863E56D0014890B /* Message.swift in Sources */,
