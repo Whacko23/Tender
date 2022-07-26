@@ -42,6 +42,7 @@
 		49CDC7E1288E1805003A4B72 /* PurchaseSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E0288E1805003A4B72 /* PurchaseSwipePromo.swift */; };
 		49CDC7E3288E314D003A4B72 /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E2288E314D003A4B72 /* PurchaseOptionView.swift */; };
 		49CDC7E5288E318E003A4B72 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E4288E318E003A4B72 /* Subscription.swift */; };
+		49CDC7E7288F9631003A4B72 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDC7E6288F9631003A4B72 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		49CDC7E0288E1805003A4B72 /* PurchaseSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSwipePromo.swift; sourceTree = "<group>"; };
 		49CDC7E2288E314D003A4B72 /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
 		49CDC7E4288E318E003A4B72 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		49CDC7E6288F9631003A4B72 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				49C0A6E02863E5240014890B /* Extension.swift */,
+				49CDC7E6288F9631003A4B72 /* RoundedCorner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				49C0A6DB2863E4940014890B /* ProfilePromoButton.swift in Sources */,
 				49CDC7E1288E1805003A4B72 /* PurchaseSwipePromo.swift in Sources */,
 				49C0A6F32863E6D80014890B /* ChatHeaderView.swift in Sources */,
+				49CDC7E7288F9631003A4B72 /* RoundedCorner.swift in Sources */,
 				49CDC7DA287FC2A9003A4B72 /* MatchesView.swift in Sources */,
 				49C0A6F12863E6C90014890B /* ChatView.swift in Sources */,
 				49CDC7C92870F4BD003A4B72 /* UserManager.swift in Sources */,
