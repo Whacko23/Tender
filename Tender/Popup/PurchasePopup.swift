@@ -10,11 +10,17 @@ import SwiftUI
 struct PurchasePopup: View {
     
     @Binding var isVisible: Bool
+    @State private var selectedIndex:Int = 1
     
     let screen = UIScreen.main.bounds
+    let subscriptions: [Subscription] = [
+        Subscription.example1,
+        Subscription.example2,
+        Subscription.example3
+    ]
     
     func processPayment() {
-        
+        //let product = subscriptions[selectedIndex]
     }
     
     var body: some View {
@@ -32,7 +38,17 @@ struct PurchasePopup: View {
                         .frame(height:geo.size.height/3)
                         .padding(.top, -35)
                     
-                    Text("3 Purchase Options")
+                    HStack{
+                        ForEach(subscriptions.indices, id: \.self){subIndex in
+                            let sub = subscriptions[subIndex]
+                            
+                            PurchaseOptionView(sub: sub, isSelected: subIndex == selectedIndex)
+                                .onTapGesture{
+                                    selectedIndex = subIndex
+                                }
+                            
+                        }
+                    }
                     
                     Spacer()
                     

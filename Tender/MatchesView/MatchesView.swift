@@ -71,7 +71,9 @@ struct MatchesView: View {
                 Spacer()
             }
             
-            Button(action: {}) {
+            Button(action: {
+                buttonAction()
+            }) {
                 Text(buttonText)
                     .padding(.vertical, 14)
                     .padding(.horizontal, 36)

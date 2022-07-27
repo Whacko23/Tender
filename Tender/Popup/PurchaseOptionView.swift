@@ -83,11 +83,11 @@ struct PurchaseOptionView: View {
     }
 }
 
-//20:08
+
 struct PurchaseOptionView_Previews: PreviewProvider {
     static var previews: some View {
         HStack{
-            PurchaseOptionView(sub: Subscription.example1, isSelected: false)
+            PurchaseOptionView(sub: Subscription.example1, isSelected: true)
             PurchaseOptionView(sub: Subscription.example2, isSelected: true)
             PurchaseOptionView(sub: Subscription.example3, isSelected: true)
         }
