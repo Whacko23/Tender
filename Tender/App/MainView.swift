@@ -13,7 +13,7 @@ struct MainView: View {
     func correctViewForState() -> some View {
         switch appState.selectedTab {
         case .fire:
-            let view = Text("fire")
+            let view = CardImageView(person: Person.example)
             return AnyView(view)
         case .search:
             let view = Text("search")

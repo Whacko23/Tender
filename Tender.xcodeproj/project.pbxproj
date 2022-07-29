@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492B35E4289371E9008A1AF7 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E3289371E9008A1AF7 /* CardImageView.swift */; };
 		49C0A6B82863DE750014890B /* TenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B72863DE750014890B /* TenderApp.swift */; };
 		49C0A6BA2863DE750014890B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B92863DE750014890B /* ContentView.swift */; };
 		49C0A6BC2863DE760014890B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C0A6BB2863DE760014890B /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492B35E3289371E9008A1AF7 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		49C0A6B42863DE750014890B /* Tender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0A6B72863DE750014890B /* TenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenderApp.swift; sourceTree = "<group>"; };
 		49C0A6B92863DE750014890B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492B35E2289371B9008A1AF7 /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				492B35E3289371E9008A1AF7 /* CardImageView.swift */,
+			);
+			path = CardViews;
+			sourceTree = "<group>";
+		};
+		492B35E5289371F3008A1AF7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				492B35E2289371B9008A1AF7 /* CardViews */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		49C0A6AB2863DE750014890B = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +133,7 @@
 		49C0A6B62863DE750014890B /* Tender */ = {
 			isa = PBXGroup;
 			children = (
+				492B35E5289371F3008A1AF7 /* Home */,
 				49CDC7CC2870FEB8003A4B72 /* MatchesView */,
 				49C0A6E92863E5FC0014890B /* Messages */,
 				49C0A6E22863E5350014890B /* Model */,
@@ -308,6 +327,7 @@
 				49C0A6F12863E6C90014890B /* ChatView.swift in Sources */,
 				49CDC7C92870F4BD003A4B72 /* UserManager.swift in Sources */,
 				49C0A6D52863E3E30014890B /* ProfileImageView.swift in Sources */,
+				492B35E4289371E9008A1AF7 /* CardImageView.swift in Sources */,
 				49CDC7CE2870FECE003A4B72 /* LikesView.swift in Sources */,
 				49C0A6E12863E5240014890B /* Extension.swift in Sources */,
 				49CDC7C3286C007B003A4B72 /* MessageListView.swift in Sources */,

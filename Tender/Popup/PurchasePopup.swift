@@ -103,7 +103,7 @@ struct PurchasePopup: View {
             }
             .frame(height: geo.size.height)
             .padding(.vertical, 20)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+            .background(Color.black.edgesIgnoringSafeArea(.all).opacity(0.9))
         }
         .frame(height: screen.height)
     }
