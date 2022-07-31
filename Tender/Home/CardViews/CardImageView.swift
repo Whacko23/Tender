@@ -120,6 +120,6 @@ struct CardImageView: View {
 
 struct CardImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CardImageView(person: Person.example, fullScreenMode: .constant(true))
+        CardImageView(person: Person.example, fullScreenMode: .constant(false))
     }
 }
