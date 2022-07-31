@@ -25,7 +25,7 @@ extension Person {
             URL(string: "https://picsum.photos/302")!,
             URL(string: "https://picsum.photos/303")!,
             URL(string: "https://picsum.photos/304")!],
-        bio: "Bio",
+        bio: "Here for a good time, not a long time 😜",
         age: 21)
     
     static let example1 = Person(
