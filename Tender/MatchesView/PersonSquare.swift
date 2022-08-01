@@ -23,16 +23,23 @@ struct PersonSquare: View {
                         $0.blur(radius: 25)
                     }
                 
-                Text("\(person.name), \(person.age)")
-                    .padding()
-//                    .foregroundColor(.white)
-                    .font(.system(size: 18, weight: .semibold))
-//                    .background(.black)
-//                    .cornerRadius(10)
-//                    .opacity(0.7)
-//                    .padding(6)
-                    .if(blur) {
-                        $0.redacted(reason: .placeholder)                 }
+                ZStack(alignment: .bottomLeading) {
+                    
+                    LinearGradient(colors: [Color.black.opacity(0.01), Color.black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
+                        .frame(height: geo.size.height/3)
+                        .blendMode(.darken)
+                    
+                    Text("\(person.name), \(person.age)")
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(.system(size: 18, weight: .semibold))
+                        .if(blur) {
+                            $0.redacted(reason: .placeholder)
+                            
+                        }
+                    
+                    
+                }
             }
             .cornerRadius(16)
         }
@@ -41,7 +48,16 @@ struct PersonSquare: View {
 
 struct PersonSquare_Previews: PreviewProvider {
     static var previews: some View {
-        PersonSquare(person: Person.example6, blur: false)
-            .frame(width:125, height: 125)
+        VStack {
+            PersonSquare(person: Person.example6, blur: false)
+                .frame(width:200, height: 200)
+                .padding()
+               
+            
+            PersonSquare(person: Person.example6, blur: false)
+                .frame(width:125, height: 125)
+                .padding()
+               
+        }
     }
 }
