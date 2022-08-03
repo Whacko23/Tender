@@ -24,6 +24,7 @@ struct PersonSquare: View {
                     }
                 
                 ZStack(alignment: .bottomLeading) {
+                    // Name and age Text along with black gradient background
                     
                     LinearGradient(colors: [Color.black.opacity(0.01), Color.black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
                         .frame(height: geo.size.height/3)
@@ -50,6 +51,10 @@ struct PersonSquare_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             PersonSquare(person: Person.example6, blur: false)
+                .frame(width:300, height: 300)
+                .padding()
+               
+            PersonSquare(person: Person.example6, blur: false)
                 .frame(width:200, height: 200)
                 .padding()
                
@@ -57,7 +62,8 @@ struct PersonSquare_Previews: PreviewProvider {
             PersonSquare(person: Person.example6, blur: false)
                 .frame(width:125, height: 125)
                 .padding()
-               
+              
+            
         }
     }
 }

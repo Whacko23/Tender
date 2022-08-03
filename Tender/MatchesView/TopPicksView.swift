@@ -44,7 +44,7 @@ struct TopPicksView: View {
             .padding(.horizontal, 6)
             
             
-        }// Scroll view
+        }//; Scroll view
     }
     
     func personTapped(_ person: Person){
