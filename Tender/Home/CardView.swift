@@ -17,7 +17,7 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geo in
             if  fullscreenMode {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                FullScreenCard(person: person, fullscreenMode: $fullscreenMode)
             } else {
                 CardImageView(person: person, fullScreenMode: $fullscreenMode)
                     .animation(.easeOut(duration: 0.2))

@@ -9,7 +9,7 @@ import Foundation
 
 class AppStateManager: ObservableObject{
     
-    @Published var selectedTab: TabBarButtonType = .person
+    @Published var selectedTab: TabBarButtonType = .fire
 //    @Published var selectedPromo: ProfilePromoType = .platinum
     
     @Published var showPersonProfile: Person? = nil

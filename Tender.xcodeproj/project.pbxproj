@@ -10,6 +10,7 @@
 		492B35E4289371E9008A1AF7 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E3289371E9008A1AF7 /* CardImageView.swift */; };
 		492B35E7289753F7008A1AF7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E6289753F7008A1AF7 /* CardView.swift */; };
 		492B35E92898B494008A1AF7 /* FullScreenCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E82898B494008A1AF7 /* FullScreenCard.swift */; };
+		492B35EB2899FD0E008A1AF7 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */; };
 		49C0A6B82863DE750014890B /* TenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B72863DE750014890B /* TenderApp.swift */; };
 		49C0A6BA2863DE750014890B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B92863DE750014890B /* ContentView.swift */; };
 		49C0A6BC2863DE760014890B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C0A6BB2863DE760014890B /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		492B35E3289371E9008A1AF7 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		492B35E6289753F7008A1AF7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		492B35E82898B494008A1AF7 /* FullScreenCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCard.swift; sourceTree = "<group>"; };
+		492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		49C0A6B42863DE750014890B /* Tender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0A6B72863DE750014890B /* TenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenderApp.swift; sourceTree = "<group>"; };
 		49C0A6B92863DE750014890B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,20 +104,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		492B35E2289371B9008A1AF7 /* v */ = {
+		492B35E5289371F3008A1AF7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				492B35E3289371E9008A1AF7 /* CardImageView.swift */,
 				492B35E6289753F7008A1AF7 /* CardView.swift */,
 				492B35E82898B494008A1AF7 /* FullScreenCard.swift */,
-			);
-			path = v;
-			sourceTree = "<group>";
-		};
-		492B35E5289371F3008A1AF7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				492B35E2289371B9008A1AF7 /* v */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -192,6 +186,7 @@
 			children = (
 				49C0A6E02863E5240014890B /* Extension.swift */,
 				49CDC7E6288F9631003A4B72 /* RoundedCorner.swift */,
+				492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +344,7 @@
 				49CDC7DC2881FC36003A4B72 /* PurchasePopup.swift in Sources */,
 				49C0A6E42863E54B0014890B /* Person.swift in Sources */,
 				49CDC7E3288E314D003A4B72 /* PurchaseOptionView.swift in Sources */,
+				492B35EB2899FD0E008A1AF7 /* CircleButtonView.swift in Sources */,
 				492B35E7289753F7008A1AF7 /* CardView.swift in Sources */,
 				49C0A6D32863E3BD0014890B /* ProfileButtonView.swift in Sources */,
 				49CDC7CB2870F6B4003A4B72 /* User.swift in Sources */,

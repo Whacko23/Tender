@@ -12,6 +12,7 @@ struct FullScreenCard: View {
     let screen = UIScreen.main.bounds
     
     @Binding var fullscreenMode: Bool
+    @EnvironmentObject var userMng: UserManager
     
     var body: some View {
         
@@ -41,7 +42,7 @@ struct FullScreenCard: View {
                         }
                         .padding([.horizontal, .top], 16)
                         
-                        Button(action: {}) {
+                        Button(action: {fullscreenMode = false}) {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))
                                 .foregroundColor(.red)
@@ -70,7 +71,7 @@ struct FullScreenCard: View {
                     Spacer().frame(height:32)
                     
                     VStack(alignment: .leading, spacing: 24) {
-                        Button(action: {}) {
+                        Button(action: {showActionSheet()}) {
                             VStack{
                                 Text("SHARE \(person.name.uppercased())'S PROFILE")
                                     .font(.system(size: 16, weight: .medium))
@@ -95,13 +96,43 @@ struct FullScreenCard: View {
                     
                 }
             }
+            
+            HStack(spacing: 20){
+                CircleButtonView(type: .no){
+                    fullscreenMode = false
+                    userMng.swipe(person, .nope)
+                }
+                .frame(height:50)
+                
+                CircleButtonView(type: .star){
+                    fullscreenMode = false
+                    userMng.superLike(person)
+                }
+                .frame(height:45)
+                
+                CircleButtonView(type: .heart){
+                    fullscreenMode = false
+                    userMng.swipe(person, .like)
+                }
+                .frame(height:50)
+            }
+            .padding(.top, 25)
+            .padding(.bottom, 45)
+            .edgesIgnoringSafeArea(.bottom)
         }
         
+    }
+    
+    func showActionSheet(){
+        let items: [Any] = ["What do you think about \(person.name)? \n"]
+        let av = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }
 }
 
 struct FullScreenCard_Previews: PreviewProvider {
     static var previews: some View {
         FullScreenCard(person: Person.example, fullscreenMode: .constant(true))
+            .environmentObject(UserManager())
     }
 }
