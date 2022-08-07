@@ -15,6 +15,8 @@ struct CardImageView: View {
     
     @Binding var fullScreenMode: Bool
     
+    let screenCutoff = (UIScreen.main.bounds.width / 2) * 0.4
+    
     func updateIndexImage(addition: Bool){
         let newIndex: Int
         
@@ -40,7 +42,40 @@ struct CardImageView: View {
                         .frame(width:geo.size.width, height: geo.size.height)
                         .clipped()
                     
-                    HStack{
+                    VStack{ // Nope or Like Overlay
+                        HStack {
+                            Text("LIKE")
+                                .font(.system(size: 42, weight: .bold))
+                                .foregroundColor(.green)
+                                .padding(.horizontal, 30)
+                                .padding(.vertical, 5)
+                                .overlay(
+                                    Rectangle()
+                                        .stroke(.green, lineWidth: 5)
+                                )
+                                .rotationEffect(Angle(degrees: -25))
+                                .opacity(Double(person.x / screenCutoff) - 1 )
+                            
+                            Spacer()
+                            Text("NOPE")
+                                .font(.system(size: 42, weight: .bold))
+                                .foregroundColor(.red)
+                                .padding(.horizontal, 30)
+                                .padding(.vertical, 5)
+                                .overlay(
+                                    Rectangle()
+                                        .stroke(.red, lineWidth: 5)
+                                )
+                                .rotationEffect(Angle(degrees: 25))
+                                .opacity(Double(person.x / screenCutoff) * -1 - 1 )
+                        }
+                        .padding(.top, 50)
+                        .padding(.horizontal, 30)
+                        
+                        Spacer()
+                    }
+                    
+                    HStack{ // 2 Rectangle for tap to like or dislike
                         Rectangle()
                             .onTapGesture{
                                 updateIndexImage(addition: false)

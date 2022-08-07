@@ -16,8 +16,6 @@ class AppStateManager: ObservableObject{
     
     @Published var showPurchasePopup: Bool = false
     
-    @Published var isFullScreenMode: Bool = false
-    
     public func showPersonProfile(_ person: Person){
         self.showPersonProfile = person
     }

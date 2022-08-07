@@ -17,6 +17,10 @@ struct FullScreenCard: View {
     var body: some View {
         
         ZStack(alignment: .bottom) {
+            
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+            
             ScrollView(showsIndicators: false){
                 VStack(spacing: 0){
                     CardImageView(person: person, fullScreenMode: $fullscreenMode)
@@ -119,6 +123,11 @@ struct FullScreenCard: View {
             .padding(.top, 25)
             .padding(.bottom, 45)
             .edgesIgnoringSafeArea(.bottom)
+            .background(
+                LinearGradient(colors: [Color.white.opacity(0.2), Color.white], startPoint: .top, endPoint: .bottom)
+                    .frame(width: screen.size.width)
+                    .edgesIgnoringSafeArea(.all)
+            )
         }
         
     }
