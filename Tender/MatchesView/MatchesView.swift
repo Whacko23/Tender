@@ -70,6 +70,7 @@ struct MatchesView: View {
                 
                 Spacer()
             }
+            .padding(.top, 20)
             
             Button(action: {
                 buttonAction()

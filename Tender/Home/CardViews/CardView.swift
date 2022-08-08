@@ -12,15 +12,19 @@ struct CardView: View {
     @State var person: Person
     @Binding var fullscreenMode: Bool
     
+    @EnvironmentObject var userMng: UserManager
+    
     let screenCutoff = (UIScreen.main.bounds.width / 2 ) * 0.8
+    
+    @Namespace var imageNamespace: Namespace.ID
     
     var body: some View {
         GeometryReader { geo in
             if  fullscreenMode {
-                FullScreenCard(person: person, fullscreenMode: $fullscreenMode)
+                FullScreenCard(person: person, fullscreenMode: $fullscreenMode, namespace: imageNamespace)
+                    .animation(.easeOut(duration: 0.2))
             } else {
                 CardImageView(person: person, fullScreenMode: $fullscreenMode)
-                    .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height )
                     .padding(.leading, 10)
                     .offset(x: person.x, y: person.y)
@@ -55,16 +59,22 @@ struct CardView: View {
                                         person.degree = 0
                                     } else if width > screenCutoff {
                                         //Swipe right
+                                        
+                                        userMng.swipe(person, .like)
                                         person.x = 500
                                         person.degree = 12
                                     } else if width < -screenCutoff {
                                         //Swipe left
+                                        
+                                        userMng.swipe(person, .nope)
                                         person.x = -500
                                         person.degree = -12
                                     }
                                 }
                             })
                     )
+                    .matchedGeometryEffect(id: "image\(person.id)", in: imageNamespace.self)
+                    .animation(.easeOut(duration: 0.2))
             }
         }
         
@@ -74,6 +84,9 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(person: Person.example, fullscreenMode: .constant(false))
+            .environmentObject(UserManager())
         CardView(person: Person.example, fullscreenMode: .constant(true))
+            .environmentObject(UserManager())
+        
     }
 }

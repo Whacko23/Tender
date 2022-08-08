@@ -56,7 +56,7 @@
 		492B35E6289753F7008A1AF7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		492B35E82898B494008A1AF7 /* FullScreenCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCard.swift; sourceTree = "<group>"; };
 		492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
-		492B35EC289F3162008A1AF7 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
+		492B35EC289F3162008A1AF7 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardStack.swift; path = Tender/Home/CardViews/CardStack.swift; sourceTree = SOURCE_ROOT; usesTabs = 0; };
 		492B35EF289F51AC008A1AF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		49C0A6B42863DE750014890B /* Tender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0A6B72863DE750014890B /* TenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenderApp.swift; sourceTree = "<group>"; };
