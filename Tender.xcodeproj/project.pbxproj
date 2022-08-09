@@ -11,8 +11,8 @@
 		492B35E7289753F7008A1AF7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E6289753F7008A1AF7 /* CardView.swift */; };
 		492B35E92898B494008A1AF7 /* FullScreenCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35E82898B494008A1AF7 /* FullScreenCard.swift */; };
 		492B35EB2899FD0E008A1AF7 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */; };
-		492B35ED289F3162008A1AF7 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35EC289F3162008A1AF7 /* CardStack.swift */; };
 		492B35F0289F51AC008A1AF7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35EF289F51AC008A1AF7 /* HomeView.swift */; };
+		492B35F328A0C7AB008A1AF7 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B35F228A0C7AB008A1AF7 /* CardStack.swift */; };
 		49C0A6B82863DE750014890B /* TenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B72863DE750014890B /* TenderApp.swift */; };
 		49C0A6BA2863DE750014890B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0A6B92863DE750014890B /* ContentView.swift */; };
 		49C0A6BC2863DE760014890B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C0A6BB2863DE760014890B /* Assets.xcassets */; };
@@ -56,9 +56,9 @@
 		492B35E6289753F7008A1AF7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		492B35E82898B494008A1AF7 /* FullScreenCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCard.swift; sourceTree = "<group>"; };
 		492B35EA2899FD0E008A1AF7 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
-		492B35EC289F3162008A1AF7 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardStack.swift; path = Tender/Home/CardViews/CardStack.swift; sourceTree = SOURCE_ROOT; usesTabs = 0; };
 		492B35EF289F51AC008A1AF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		492B35F128A0C27E008A1AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		492B35F228A0C7AB008A1AF7 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		49C0A6B42863DE750014890B /* Tender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0A6B72863DE750014890B /* TenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenderApp.swift; sourceTree = "<group>"; };
 		49C0A6B92863DE750014890B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				492B35E3289371E9008A1AF7 /* CardImageView.swift */,
-				492B35EC289F3162008A1AF7 /* CardStack.swift */,
+				492B35F228A0C7AB008A1AF7 /* CardStack.swift */,
 				492B35E6289753F7008A1AF7 /* CardView.swift */,
 				492B35E82898B494008A1AF7 /* FullScreenCard.swift */,
 			);
@@ -338,6 +338,7 @@
 				49CDC7D4287252B9003A4B72 /* PersonSquare.swift in Sources */,
 				49CDC7C7286E8439003A4B72 /* MessageRowView.swift in Sources */,
 				49C0A6DB2863E4940014890B /* ProfilePromoButton.swift in Sources */,
+				492B35F328A0C7AB008A1AF7 /* CardStack.swift in Sources */,
 				49CDC7E1288E1805003A4B72 /* PurchaseSwipePromo.swift in Sources */,
 				49C0A6F32863E6D80014890B /* ChatHeaderView.swift in Sources */,
 				49CDC7E7288F9631003A4B72 /* RoundedCorner.swift in Sources */,
@@ -367,7 +368,6 @@
 				49CDC7CB2870F6B4003A4B72 /* User.swift in Sources */,
 				49C0A6E82863E56D0014890B /* Message.swift in Sources */,
 				49C0A6E62863E5620014890B /* MessagePreview.swift in Sources */,
-				492B35ED289F3162008A1AF7 /* CardStack.swift in Sources */,
 				49C0A6B82863DE750014890B /* TenderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

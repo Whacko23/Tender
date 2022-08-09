@@ -21,14 +21,13 @@ struct FullScreenCard: View {
         ZStack(alignment: .bottom) {
             
             Color.white
-                .edgesIgnoringSafeArea(.all) 
+                .edgesIgnoringSafeArea(.all)
             
             ScrollView(showsIndicators: false){
                 VStack(spacing: 0){
                     CardImageView(person: person, fullScreenMode: $fullscreenMode)
                         .frame(width: screen.size.width, height: screen.size.height * 0.6)
                         .matchedGeometryEffect(id: "image\(person.id)", in: namespace)
-                    
                     
                     HStack{
                         VStack(alignment: .leading){
@@ -134,6 +133,8 @@ struct FullScreenCard: View {
             )
         }
         
+        
+        
     }
     
     func showActionSheet(){
@@ -144,10 +145,10 @@ struct FullScreenCard: View {
 }
 
 struct FullScreenCard_Previews: PreviewProvider {
-    @Namespace static var namespace
+    @Namespace static var placeholder
     static var previews: some View {
         
-        FullScreenCard(person: Person.example, fullscreenMode: .constant(true), namespace: namespace)
+        FullScreenCard(person: Person.example, fullscreenMode: .constant(true), namespace: placeholder)
             .environmentObject(UserManager())
     }
 }

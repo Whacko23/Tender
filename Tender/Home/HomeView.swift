@@ -13,48 +13,18 @@ struct HomeView: View {
     @EnvironmentObject var appState: AppStateManager
     
     var body: some View {
+        
+        
+        
         VStack {
+            Spacer()
+                .frame(height: 80)
+            
             CardStack(people: userMng.cardPeople)
-            
-            Spacer()
-            
-            HStack {
-                CircleButtonView(type: .back, action: {
-                    appState.showPurchaseScreen()
-                })
-                Spacer()
-                CircleButtonView(type: .no, action: {
-                    if let person = userMng.cardPeople.last{
-                        userMng.swipe(person, .nope)
-                    }
-                })
-                Spacer()
-                CircleButtonView(type: .star, action: {
-                    if let person = userMng.cardPeople.last{
-                        if userMng.currentUser.goldSubscriber {
-                            userMng.superLike(person)
-                        } else {
-                            appState.showPurchaseScreen()
-                        }
-                    }
-                })
-                Spacer()
-                CircleButtonView(type: .heart, action: {
-                    if let person = userMng.cardPeople.last{
-                        userMng.swipe(person, .like)
-                    }
-                })
-                Spacer()
-                CircleButtonView(type: .lightning, action: {
-                    appState.showPurchaseScreen()
-                })
-            }
-            .frame(height: 50)
-            .padding(.horizontal)
-            .padding(.vertical, 25)
-            
-            Spacer()
+                .offset(y: -60)
         }
+        
+          
         
     }
 }

@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct CardStack: View {
+    
+    var people: [Person]
+    @State private var fullScreen: Bool = false
+    
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            ForEach(people){person in
+                CardView(person: person, fullscreenMode: $fullScreen)
+            }
+        }
+        .frame(width:screen.width, height: fullScreen ? screen.height : screen.height * 0.8 )
     }
 }
 
 struct CardStack_Previews: PreviewProvider {
     static var previews: some View {
-        CardStack()
+        CardStack(people: Person.examples)
     }
 }
